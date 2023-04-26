@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNAKE GAME</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />    
+  </head>
+  <body>
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-xxl">
+        <a href="#" class="navbar-brand">
+          <span class="fw-bold text-secondary"
+            ><i class="bi bi-book-half"></i> INLÄMNINGSUPPGIFT GUSTAF VIKLUND
+          </span>
+        </a>        
+
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+          <ul class="navbar-nav">            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="tidDropdown" data-bs-auto-close="outside" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Välj spel
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropend">
+                  <a id="snake-link" class="dropdown-item" href="#">SNAKE</a>
+                </li>
+                <li class="dropend">
+                  <a class="dropdown-item disabled text-muted" href="#">Memory</a>                  
+                </li>                
+              </ul>
+            </li>
+          </ul>
+        </div>      
+    </nav>
+
+    <!-- Main image & intro text -->
+    <div id="sections">
+      <section id="intro" style="margin-top: 50px;">
+      <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 text-center text-md-start">
+            <h1>
+              <div class="display-3">Learn</div>
+              <div class="display-5 text-muted">JavaScript</div>
+            </h1>
+            <p class="lead my-4 text-muted">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </p>            
+          </div>
+          <div class="col-md-5 text-center d-none d-md-block">
+            <a href="https://www.w3schools.com/js/">
+              <img class="img-fluid img-size" src="/assets/JS.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div></div>
+    <section id="intro">
+      <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 text-center text-md-start">
+            <h1>
+              <div class="display-3">Learn</div>
+              <div class="display-5 text-muted">HTML</div>
+            </h1>
+            <p class="lead my-4 text-muted">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </p>            
+          </div>
+          <div class="col-md-5 text-center d-none d-md-block">
+            <a href="https://www.w3schools.com/html/">
+              <img class="img-fluid img-size" src="/assets/unnamed.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="intro">
+      <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 text-center text-md-start">
+            <h1>
+              <div class="display-3">Learn</div>
+              <div class="display-5 text-muted">BootStrap</div>
+            </h1>
+            <p class="lead my-4 text-muted">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </p>            
+          </div>
+          <div class="col-md-5 text-center d-none d-md-block">
+            <a href="https://www.w3schools.com/bootstrap5/">
+              <img class="img-fluid img-size" src="/assets/bootstrap.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+    
+    <div id="gameContainer">
+      <button id="startBtn" style="position:absolute; top:40%; left:50%; transform:translate(-50%,-50%);">Start</button>
+      <div id="scoreText">0</div>
+      <canvas id="gameBoard" width="500" height="500"></canvas><br>
+      <div>
+        <img id="upButton" class="arrow-image" src="assets/keyboard_key_up.png"><br>
+        <img id="leftButton" class="arrow-image" src="assets/keyboard_key_left.png">
+        <img id="downButton" class="arrow-image" src="assets/keyboard_key_down.png">
+        <img id="rightButton" class="arrow-image" src="assets/keyboard_key_right.png">        
+      </div>     
+      <div id="controlBtns">
+        <button id="clockwise-button">Clockwise</button>
+        <button id="counterclockwise-button">Counterclockwise</button><br> 
+      </div>     
+      <button id="resetBtn" disabled>Reset</button><br>
+      <div id="highscoreBtns">
+        <button id="highScoreBtn">Show High Scores</button>
+        <button id="clearHighscoreBtn">Clear Highscores</button>
+      </div>
+      <div id="highScores"></div>      
+    </div>
+    <script src="index.js"></script>
+
+  </body>
+</html>

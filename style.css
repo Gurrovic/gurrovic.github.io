@@ -1,0 +1,106 @@
+body {
+  background-image: linear-gradient(to bottom, #FF4136, #FF851B);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+.dropdown:hover > .dropdown-menu{
+    display: block;
+    margin-top: 0;
+    background-color: lightblue;
+}
+
+.img-size {
+    width: 200px;
+    height: auto;
+  }
+
+.navbar {
+  background-color: darkblue;
+  height: 35px;
+} 
+
+.nav-link {
+  color: white;
+}
+
+#gameContainer{
+  text-align: center;
+  display: none;  
+}
+
+#startBtn {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #f44336;
+  padding: 20px 30px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(244,67,54,0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+#startBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(244,67,54,0.4);
+}
+
+#gameBoard{
+  border: 3px solid;
+  margin-top: 10px;
+  background-color: blue;
+}
+
+#scoreText{
+  font-family: "Permanent Marker", cursive;
+  font-size: 50px;
+}
+
+#resetBtn{
+  font-family: "Permanent Marker", cursive;
+  font-size: 22px;
+  width: 80px;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#controlBtns button {
+  font-family: "Permanent Marker", cursive;
+  border: 2px solid;
+  font-size: 22px;
+  width: 230px;
+  height: 40px;  
+  margin: 1px;
+  border-radius: 15px;
+}
+
+#highscoreBtns button{
+  font-family: "Permanent Marker", cursive;
+  border: 2px solid;
+  font-size: 22px;
+  width: 230px;
+  height: 40px;  
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+.arrow-image {
+  position: relative;
+  width: 50px;
+  height: 50px;   
+}
+
+.arrow-image:active {  
+  filter: brightness(150%) saturate(150%) hue-rotate(180deg);
+}
